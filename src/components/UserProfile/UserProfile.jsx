@@ -1,7 +1,15 @@
-import React from 'react'
+import React from 'react';
 
-export default function UserProfile(props) {
+function UserProfile(props) {
   return (
     <div>User Profile</div>
-  )
+  );
 }
+
+const UserRoles = {
+  ADMIN: 'admin',
+  USER: 'user'
+};
+
+export { UserRoles };
+export default UserProfile;

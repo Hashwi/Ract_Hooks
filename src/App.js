@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import UserProfile from './components/UserProfile/UserProfile';
+import UserProfile, {UserRoles} from './components/UserProfile/UserProfile';
 
 function App() {
   return (
@@ -11,6 +11,12 @@ function App() {
        <h1>Hello World!</h1>
 
         <UserProfile/>
+        <span>
+        {UserRoles.ADMIN} 
+        {' '}
+        {UserRoles.USER}
+        </span>
+        
      
       </header>
     </div>
