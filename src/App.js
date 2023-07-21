@@ -24,6 +24,11 @@ const[title , setTitle] = useState('Hello There!');
         <UserProfile 
         title = {title}
         name = 'hash'
+        address={{
+          zipCode:1567,
+          city: 'colombo'
+
+        }}
         />
         {/* <span>
         {UserRoles.ADMIN} 

@@ -16,8 +16,8 @@ UserProfile.propTypes = {
     name: PropTypes.string,
     address: PropTypes.shape({
         zipCode: PropTypes.string.isRequired,
-        city: PropTypes
-    })
+        city: PropTypes.string.isRequired
+    }).isRequired
     
 }
 
