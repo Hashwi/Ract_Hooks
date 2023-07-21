@@ -7,7 +7,13 @@ import UserProfile from './components/UserProfile/UserProfile';
 
 function App() {
 const[userLoggedIn , setUserLoggedIn] = useState(false);
-const[users, setUsers] = useState(['user 01', 'user 02', 'user 03', 'user 04'])
+const [users, setUsers] = useState([
+  { value: 'user 01', key: 1},
+  { value: 'user 02', key: 2 },
+  { value: 'user 03', key: 3 },
+  { value: 'user 04', key: 4 }
+]);
+
 
 // useEffect (() => {
 //  setTimeout(()=>{
@@ -64,9 +70,15 @@ const onClickHandler = () => {
         
         { userLoggedIn && <p>Hello</p>}
 
-        {users.map(user => <div key={Math.random()}> 
-          <li>{user}</li>
+        {/* giving key using index */}
+        {users.map((user) => <div key={user.key}> 
+          <li>{user.value}</li>
         </div>)} <br></br>
+
+        {/* giving a key using math.random() */}
+        {/* {users.map(user => <div key={Math.random()}> 
+          <li>{user}</li>
+        </div>)} <br></br> */}
 
         <button onClick={onClickHandler}>{!userLoggedIn ? "LogIn" : "Logout"}</button>
      
