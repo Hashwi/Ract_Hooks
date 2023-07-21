@@ -14,8 +14,12 @@ const[title , setTitle] = useState('Hello There!');
 //  }, 5000)
 // }, [])
 
-const handleOnUpdateEvent =(message ,age) => {
-  console.log(message, age)
+// const handleOnUpdateEvent =(message ,age) => {
+//   console.log(message, age)
+// }
+
+const handleClick = () => {
+  
 }
 
   return (
@@ -25,7 +29,7 @@ const handleOnUpdateEvent =(message ,age) => {
        
        <h1>Hello World!</h1>
 
-        <UserProfile 
+        {/* <UserProfile 
         title = 'Display User Profile'
         name = 'hash'
         address={{
@@ -39,7 +43,9 @@ const handleOnUpdateEvent =(message ,age) => {
         {UserRoles.ADMIN} 
         {' '}
         {UserRoles.USER}
-        </span> */}
+        </span> */} 
+
+        <button onClick={handleClick}>OK</button>
         
      
       </header>
