@@ -25,6 +25,10 @@ const handleCancelClick = () => {
   console.log('Cancel btn pressesd')
 }
 
+const handleInputChange = (event) => {
+ console.log(event.target.value)
+}
+
   return (
     <div className="App">
       <header className="App-header">
@@ -47,6 +51,7 @@ const handleCancelClick = () => {
         {' '}
         {UserRoles.USER}
         </span> */} 
+        <input type ='text' onChange={(event) => handleInputChange (event)}></input>
 
         <button onClick={handleOkClick}>OK</button>
         <button onClick={handleCancelClick}>Cancel</button>
