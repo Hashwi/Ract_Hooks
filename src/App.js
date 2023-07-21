@@ -6,7 +6,8 @@ import UserProfile from './components/UserProfile/UserProfile';
 // import UserProfile, {UserRoles} from './components/UserProfile/UserProfile';
 
 function App() {
-const[title , setTitle] = useState('Hello There!');
+const[userLoggedIn , setUserLoggedIn] = useState(false);
+const[users, setUsers] = useState(['user 01', 'user 02', 'user 03', 'user 04'])
 
 // useEffect (() => {
 //  setTimeout(()=>{
@@ -18,15 +19,20 @@ const[title , setTitle] = useState('Hello There!');
 //   console.log(message, age)
 // }
 
-const handleOkClick = () => {
-  console.log('ok btn pressesd')
-}
-const handleCancelClick = () => {
-  console.log('Cancel btn pressesd')
-}
+// const handleOkClick = () => {
+//   console.log('ok btn pressesd')
+// }
+// const handleCancelClick = () => {
+//   console.log('Cancel btn pressesd')
+// }
 
-const handleInputChange = (event) => {
- console.log(event.target.value)
+// const handleInputChange = (event) => {
+//  console.log(event.target.value)
+// }
+
+const onClickHandler = () => {
+  setUserLoggedIn(!userLoggedIn)
+
 }
 
   return (
@@ -51,11 +57,18 @@ const handleInputChange = (event) => {
         {' '}
         {UserRoles.USER}
         </span> */} 
-        <input type ='text' onChange={(event) => handleInputChange (event)}></input>
+        {/* <input type ='text' onChange={(event) => handleInputChange (event)}></input>
 
         <button onClick={handleOkClick}>OK</button>
-        <button onClick={handleCancelClick}>Cancel</button>
+        <button onClick={handleCancelClick}>Cancel</button> */}
         
+        { userLoggedIn && <p>Hello</p>}
+
+        {users.map(user => <div key={Math.random()}> 
+          <li>{user}</li>
+        </div>)} <br></br>
+
+        <button onClick={onClickHandler}>{!userLoggedIn ? "LogIn" : "Logout"}</button>
      
       </header>
     </div>
