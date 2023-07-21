@@ -1,15 +1,30 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 function UserProfile(props) {
+
   return (
-    <div>User Profile</div>
+    <div>
+        <div>{props.title}</div>
+        <div>{props.name}</div>
+    </div>
   );
 }
 
-const UserRoles = {
-  ADMIN: 'admin',
-  USER: 'user'
-};
+UserProfile.propTypes = {
+    title: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    address: PropTypes.shape({
+        zipCode: PropTypes.string.isRequired,
+        city: PropTypes
+    })
+    
+}
 
-export { UserRoles };
+// const UserRoles = {
+//   ADMIN: 'admin',
+//   USER: 'user'
+// };
+
+// export { UserRoles };
 export default UserProfile;

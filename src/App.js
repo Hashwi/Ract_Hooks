@@ -1,8 +1,19 @@
+import { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import UserProfile, {UserRoles} from './components/UserProfile/UserProfile';
+import UserProfile from './components/UserProfile/UserProfile';
+
+// import UserProfile, {UserRoles} from './components/UserProfile/UserProfile';
 
 function App() {
+const[title , setTitle] = useState('Hello There!');
+
+// useEffect (() => {
+//  setTimeout(()=>{
+//   setTitle('Hello It is ME!')
+//  }, 5000)
+// }, [])
+
   return (
     <div className="App">
       <header className="App-header">
@@ -10,12 +21,15 @@ function App() {
        
        <h1>Hello World!</h1>
 
-        <UserProfile/>
-        <span>
+        <UserProfile 
+        title = {title}
+        name = 'hash'
+        />
+        {/* <span>
         {UserRoles.ADMIN} 
         {' '}
         {UserRoles.USER}
-        </span>
+        </span> */}
         
      
       </header>
