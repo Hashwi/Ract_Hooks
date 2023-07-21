@@ -18,8 +18,11 @@ const[title , setTitle] = useState('Hello There!');
 //   console.log(message, age)
 // }
 
-const handleClick = () => {
-  
+const handleOkClick = () => {
+  console.log('ok btn pressesd')
+}
+const handleCancelClick = () => {
+  console.log('Cancel btn pressesd')
 }
 
   return (
@@ -45,7 +48,8 @@ const handleClick = () => {
         {UserRoles.USER}
         </span> */} 
 
-        <button onClick={handleClick}>OK</button>
+        <button onClick={handleOkClick}>OK</button>
+        <button onClick={handleCancelClick}>Cancel</button>
         
      
       </header>
