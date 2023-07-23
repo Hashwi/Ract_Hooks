@@ -86,6 +86,4 @@ const onClickHandler = () => {
     </div>
   );
 }
-
-
 export default App;
